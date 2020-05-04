@@ -15,7 +15,9 @@ return [
     |
     */
 
-    'paths' => ['api/*'],
+   
+
+    'paths' => ['http://localhost:8080/*'],
 
     'allowed_methods' => ['*'],
 
