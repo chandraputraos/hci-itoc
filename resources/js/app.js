@@ -7,11 +7,11 @@ Vue.use(VueRouter);
 
 import VueAxios from 'vue-axios';
 import axios from 'axios';
-import datetime from 'vuejs-datetimepicker'
-
+import datetime from 'vuejs-datetimepicker';
 Vue.use(VueAxios, axios);
 
-
+import VueToastify from "vue-toastify";
+Vue.use(VueToastify);
 
 import IndexComponent from './components/posts/Index.vue';
 import CreateComponent from './components/posts/Create.vue';
@@ -29,7 +29,7 @@ const routes = [{
     },
     {
         name: 'edit',
-        path: '/edit/:id',
+        path: '/edit',
         component: EditComponent
     }
 ];

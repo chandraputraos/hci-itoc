@@ -150,7 +150,7 @@ import datetime from 'vuejs-datetimepicker'
         recordByID: function() {
 
 
-            axios.get('http://localhost:8080/crud/api.php', {
+            axios.get('http://localhost:8080/hdreg/files/api/view_data.php', {
                     params: {
                         office: this.office,
                         date: this.date,
@@ -159,10 +159,14 @@ import datetime from 'vuejs-datetimepicker'
                     }
                 })
                 .then(response => {
+                  
                    this.users = response.data;
+                   this.$vToastify.success("Data berhasil diambil");
                 })
                 .catch(function(error) {
+                  
                     console.log(error);
+                    
                 });
 
 

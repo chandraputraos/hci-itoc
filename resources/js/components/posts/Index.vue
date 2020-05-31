@@ -49,6 +49,7 @@
             let uri = `http://localhost:8080/hdreg/files/api/user_admin.php`;
             this.axios.get(uri).then(response => {
                 this.posts = response.data  ;
+                 this.$vToastify.success("Data berhasil diambil");
             }).catch((e) => {
             console.log(e);
         }); 
